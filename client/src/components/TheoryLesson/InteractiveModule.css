@@ -1,0 +1,350 @@
+.interactive-module {
+  margin-bottom: 1rem;
+}
+
+.ile-progress {
+  margin-bottom: 1rem;
+}
+
+.ile-progress-bar {
+  height: 6px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 0.4rem;
+}
+
+.ile-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--success));
+  border-radius: 999px;
+  transition: width 0.35s ease;
+}
+
+.ile-progress-text {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.ile-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-card);
+}
+
+.ile-type-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-blue);
+  background: var(--accent-blue-dim);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.ile-question {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.45;
+  margin: 0 0 1rem;
+}
+
+/* MCQ */
+.ile-mcq-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ile-mcq-opt {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  background: var(--bg-hover);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ile-mcq-opt:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.ile-mcq-opt:disabled {
+  cursor: default;
+}
+
+.ile-mcq-opt.correct {
+  border-color: var(--success);
+  background: var(--success-dim);
+  color: var(--success);
+}
+
+.ile-mcq-opt.wrong {
+  border-color: var(--danger);
+  background: var(--danger-dim);
+  color: var(--danger);
+}
+
+.ile-mcq-letter {
+  font-weight: 800;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.ile-mcq-opt.correct .ile-mcq-letter,
+.ile-mcq-opt.wrong .ile-mcq-letter {
+  color: inherit;
+}
+
+/* Fill / Mini */
+.ile-fill {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.ile-fill-input {
+  flex: 1;
+  min-width: 180px;
+  padding: 0.7rem 1rem;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg-input);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-family: var(--font-mono);
+}
+
+.ile-fill-input:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+.ile-mini-input {
+  font-family: var(--font-mono);
+}
+
+.ile-check-btn,
+.ile-next-btn,
+.ile-retry-btn {
+  padding: 0.7rem 1.2rem;
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: filter 0.15s;
+}
+
+.ile-check-btn {
+  background: var(--accent-blue);
+  color: #fff;
+}
+
+.ile-next-btn {
+  background: var(--accent);
+  color: #0f172a;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+[data-theme="dark"] .ile-next-btn {
+  color: #0c1018;
+}
+
+.ile-retry-btn {
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  margin-top: 0.75rem;
+}
+
+.ile-check-btn:hover,
+.ile-next-btn:hover {
+  filter: brightness(1.08);
+}
+
+/* Drag */
+.ile-drag-hint {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: 0 0 0.75rem;
+}
+
+.ile-drag-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.ile-drag-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 0.85rem;
+  background: var(--bg-hover);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  cursor: grab;
+  user-select: none;
+}
+
+.ile-drag-item:active {
+  cursor: grabbing;
+}
+
+.ile-drag-item.correct {
+  border-color: var(--success);
+  background: var(--success-dim);
+}
+
+.ile-drag-item.wrong {
+  border-color: var(--danger);
+}
+
+.ile-drag-handle {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.ile-drag-label {
+  flex: 1;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.ile-drag-arrows {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.ile-drag-arrows button {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+.ile-drag-arrows button:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Feedback */
+.ile-feedback {
+  margin: 0.75rem 0 0;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.ile-feedback.correct { color: var(--success); }
+.ile-feedback.wrong { color: var(--danger); }
+
+.ile-explanation {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.ile-explanation.correct {
+  background: var(--success-dim);
+  border: 1px solid color-mix(in srgb, var(--success) 35%, transparent);
+}
+
+.ile-explanation.wrong {
+  background: var(--danger-dim);
+  border: 1px solid color-mix(in srgb, var(--danger) 35%, transparent);
+}
+
+.ile-explanation strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--text-primary);
+  font-size: 0.8rem;
+}
+
+.ile-explanation p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+/* Dots */
+.ile-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+
+.ile-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: var(--border);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.15s;
+}
+
+.ile-dot.active {
+  background: var(--accent-blue);
+  transform: scale(1.2);
+}
+
+.ile-dot.done {
+  background: var(--success);
+}
+
+/* Complete */
+.ile-complete-banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--success-dim);
+  border: 1px solid color-mix(in srgb, var(--success) 40%, transparent);
+  border-radius: var(--radius-lg);
+  margin-bottom: 1rem;
+}
+
+.ile-complete-banner span:first-child {
+  font-size: 2rem;
+}
+
+.ile-complete-banner strong {
+  color: var(--success);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.ile-complete-banner p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}

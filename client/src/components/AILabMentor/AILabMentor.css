@@ -1,0 +1,62 @@
+.lab-mentor-panel {
+  border-color: #23863655;
+  height: 560px;
+}
+
+.lab-mentor-header {
+  background: linear-gradient(135deg, var(--bg-elevated), var(--success-dim));
+}
+
+.lab-mentor-status {
+  color: var(--success) !important;
+}
+
+.lab-mentor-context {
+  padding: 0.4rem 1.2rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.lab-mentor-panel .msg-bubble {
+  line-height: 1.5;
+}
+
+.lab-mentor-quick {
+  border-color: #23863644 !important;
+}
+
+.lab-mentor-quick:hover {
+  background: #23863620 !important;
+  border-color: var(--success) !important;
+}
+
+.lab-mentor-btn {
+  width: 100%;
+  background: linear-gradient(135deg, var(--success), var(--accent-blue));
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.lab-mentor-btn:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.lab-mentor-btn .mentor-sub {
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 0.85;
+}

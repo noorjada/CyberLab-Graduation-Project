@@ -1,0 +1,127 @@
+.course-builder {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.course-create-form,
+.course-manage {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+}
+
+.course-create-form h3,
+.course-manage h3 {
+  margin: 0 0 0.5rem;
+  color: var(--text-primary);
+}
+
+.form-hint {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: 0 0 1rem;
+}
+
+.course-create-form .form-grid,
+.module-add-form .form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.course-create-form input,
+.course-create-form select,
+.course-create-form textarea,
+.module-add-form input,
+.module-add-form select,
+.module-add-form textarea,
+.course-manage select {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-hover);
+  color: var(--text-primary);
+  font-size: 0.88rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-create-form button,
+.module-add-form button {
+  padding: 0.6rem 1.1rem;
+  background: var(--accent);
+  color: #0f172a;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.course-manage-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.course-manage-head .meta {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.course-manage-head button.publish {
+  background: var(--success);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.course-manage-head button.unpublish {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.module-outline {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+
+.module-outline li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.35rem 0;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.module-outline button {
+  background: none;
+  border: none;
+  color: var(--danger, #f85149);
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.module-add-form {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+.module-add-form h4 {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+}

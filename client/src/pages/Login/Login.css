@@ -1,0 +1,102 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - var(--topbar-height));
+  padding: 2rem;
+  background: var(--bg-primary);
+}
+
+.auth-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: var(--shadow-lg);
+}
+
+.auth-card h2 {
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.auth-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-size: 0.92rem;
+}
+
+.oauth-btn {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-hover);
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.92rem;
+  transition: background var(--transition);
+}
+
+.oauth-btn:hover { background: var(--bg-elevated); }
+
+.form-group { margin-bottom: 1.2rem; }
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 0.85rem;
+  background: var(--accent);
+  color: #0f172a;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 700;
+  transition: filter var(--transition);
+}
+
+[data-theme="dark"] .auth-btn { color: #0c1018; }
+
+.auth-btn:hover { filter: brightness(1.06); }
+
+.auth-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+.auth-footer a {
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+.auth-error {
+  background: var(--danger-dim);
+  border: 1px solid color-mix(in srgb, var(--danger) 40%, transparent);
+  color: var(--danger);
+  padding: 0.65rem 0.9rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  font-size: 0.88rem;
+}

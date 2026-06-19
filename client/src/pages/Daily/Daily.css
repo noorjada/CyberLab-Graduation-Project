@@ -1,0 +1,254 @@
+.daily-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.daily-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.daily-header h1 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.daily-header p {
+  color: var(--text-secondary);
+}
+
+.streak-card {
+  background: linear-gradient(135deg, #1a0a00, var(--warning-dim));
+  border: 1px solid color-mix(in srgb, var(--warning) 35%, transparent);
+  border-radius: 16px;
+  padding: 1.2rem 2rem;
+  text-align: center;
+  min-width: 150px;
+}
+
+.streak-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--warning);
+  line-height: 1;
+}
+
+.streak-label {
+  color: var(--warning);
+  font-size: 1rem;
+  margin: 0.3rem 0;
+}
+
+.streak-timer {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+}
+
+.streak-info {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.streak-milestone {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.streak-milestone span {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.streak-milestone span.achieved {
+  color: var(--warning);
+  font-weight: bold;
+}
+
+.bonus-info {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.daily-challenge-card {
+  background: var(--card-bg);
+  border: 1px solid color-mix(in srgb, var(--warning) 35%, transparent);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.daily-badge {
+  position: absolute;
+  top: -12px;
+  left: 1.5rem;
+  background: linear-gradient(90deg, var(--warning), var(--danger));
+  color: var(--card-bg);
+  padding: 0.2rem 1rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.daily-challenge-header {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.daily-icon {
+  font-size: 2.5rem;
+}
+
+.daily-challenge-header h2 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.daily-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.bonus-xp {
+  color: var(--warning);
+  font-weight: bold;
+}
+
+.daily-description {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.daily-hints {
+  background: var(--bg-elevated);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.daily-hints h4 {
+  color: var(--warning);
+  margin-bottom: 0.5rem;
+}
+
+.daily-hints p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.daily-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.daily-form input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.daily-form input:focus {
+  border-color: var(--warning);
+  outline: none;
+}
+
+.daily-form button {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(90deg, var(--warning), var(--danger));
+  color: var(--card-bg);
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+.daily-form button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.daily-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.daily-solved {
+  text-align: center;
+  color: var(--success);
+  font-size: 1.1rem;
+  padding: 1.5rem;
+  background: var(--diff-easy-bg);
+  border-radius: 8px;
+}
+
+.daily-solved p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.next-challenge {
+  color: var(--warning);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.streak-history {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.streak-history h3 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.streak-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.streak-step {
+  text-align: center;
+  padding: 1rem;
+  background: var(--bg-elevated);
+  border-radius: 8px;
+}
+
+.streak-step span {
+  font-size: 1.8rem;
+}
+
+.streak-step p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}

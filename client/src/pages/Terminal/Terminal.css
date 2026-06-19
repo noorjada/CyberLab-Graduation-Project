@@ -1,0 +1,122 @@
+.terminal-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.terminal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.terminal-header h1 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.terminal-header p {
+  color: var(--text-secondary);
+}
+
+.terminal-tips {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.tip {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+}
+
+.terminal-container {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.terminal-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border);
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot.red { background: var(--danger); }
+.dot.yellow { background: var(--warning); }
+.dot.green { background: var(--success); }
+
+.terminal-title {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-family: monospace;
+}
+
+.terminal-body {
+  padding: 0.5rem;
+  height: 500px;
+}
+
+.terminal-commands-ref {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.terminal-commands-ref h3 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.commands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.cmd-ref {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  background: var(--bg-elevated);
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+}
+
+.cmd-ref code {
+  color: var(--accent-blue);
+  font-size: 0.85rem;
+  font-family: monospace;
+}
+
+.cmd-ref span {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}

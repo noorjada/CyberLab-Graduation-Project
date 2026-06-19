@@ -1,0 +1,323 @@
+.theory-lesson {
+  background: linear-gradient(135deg, var(--accent-dim) 0%, var(--card-bg) 45%);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--border));
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow-card);
+}
+
+.theory-lesson--compact {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.theory-lesson-header {
+  margin-bottom: 1rem;
+}
+
+.theory-lesson-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #0f172a;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 0.5rem;
+}
+
+[data-theme="dark"] .theory-lesson-badge {
+  color: #0c1018;
+}
+
+.theory-lesson-intro {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.theory-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.theory-tab {
+  background: var(--bg-hover);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 0.45rem 0.75rem;
+  border-radius: var(--radius-md);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.theory-tab:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.theory-tab.active {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.theory-panel {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.15rem;
+  min-height: 120px;
+}
+
+.theory-panel-content p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin: 0 0 0.75rem;
+}
+
+.theory-code {
+  background: var(--terminal-bg);
+  border: 1px solid var(--terminal-border);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  overflow-x: auto;
+  margin: 0.75rem 0;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--terminal-text);
+}
+
+.theory-bullets {
+  margin: 0.5rem 0 0 1.1rem;
+  padding: 0;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.theory-bullets li {
+  margin-bottom: 0.35rem;
+}
+
+.theory-ack-btn {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--accent);
+  color: #0f172a;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter var(--transition);
+}
+
+[data-theme="dark"] .theory-ack-btn {
+  color: #0c1018;
+}
+
+.theory-ack-btn:hover {
+  filter: brightness(1.08);
+}
+
+.theory-ack-done {
+  margin: 0.85rem 0 0;
+  text-align: center;
+  color: var(--success);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.theory-ack-hint {
+  margin: 0.75rem 0 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.theory-reference-wrap {
+  margin-top: 0.5rem;
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+}
+
+.theory-reference-toggle {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.35rem 0;
+  width: 100%;
+  text-align: left;
+}
+
+.theory-reference-toggle:hover {
+  color: var(--accent);
+}
+
+.theory-tabs--compact {
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.theory-panel--compact {
+  min-height: auto;
+  padding: 0.85rem;
+}
+
+/* Dim challenge/lab actions until lesson acknowledged — optional wrapper */
+.theory-gated {
+  opacity: 0.45;
+  pointer-events: none;
+  filter: grayscale(0.2);
+  transition: opacity 0.25s ease;
+}
+
+.theory-gated.unlocked {
+  opacity: 1;
+  pointer-events: auto;
+  filter: none;
+}
+
+/* ── 5-step learning path ── */
+.learning-stepper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.15rem;
+  margin-bottom: 1.15rem;
+  padding: 0.65rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.learning-step {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.4rem 0.55rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition);
+  min-width: 4.5rem;
+}
+
+.learning-step:hover:not(:disabled) {
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+}
+
+.learning-step.active {
+  background: var(--accent-blue-dim);
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.learning-step.done {
+  color: var(--success);
+}
+
+.learning-step.locked {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.learning-step-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.learning-step-label {
+  white-space: nowrap;
+}
+
+.learning-step-arrow {
+  display: none;
+}
+
+.learning-step-content {
+  min-height: 80px;
+}
+
+.learning-step-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin: 0 0 1rem;
+  line-height: 1.55;
+}
+
+.learning-handson-step .handson-ready-card {
+  text-align: center;
+  padding: 1.25rem 1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+}
+
+.handson-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.handson-ready-card h4 {
+  margin: 0 0 0.5rem;
+  color: var(--text-primary);
+  font-size: 1.05rem;
+}
+
+.handson-ready-card p {
+  margin: 0 0 0.5rem;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.handson-points {
+  color: var(--accent) !important;
+  font-weight: 600;
+}
+
+.handson-hint {
+  font-size: 0.82rem !important;
+  color: var(--text-muted) !important;
+}
+
+.theory-ack-hint.subtle {
+  margin-top: 0.85rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--border);
+}
+
+@media (max-width: 520px) {
+  .learning-stepper {
+    justify-content: center;
+  }
+
+  .learning-step {
+    min-width: 3.5rem;
+    font-size: 0.62rem;
+  }
+}

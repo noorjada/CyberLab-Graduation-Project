@@ -1,0 +1,50 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "CyberLab backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "kill-port": "powershell -ExecutionPolicy Bypass -File ./scripts/kill-port.ps1",
+    "predev": "npm run kill-port",
+    "dev": "nodemon server.js",
+    "test": "jest --forceExit --detectOpenHandles",
+    "seed:users": "node seedUsers.js",
+    "db:start": "powershell -ExecutionPolicy Bypass -File ./scripts/start-mongodb.ps1",
+    "db:merge": "powershell -ExecutionPolicy Bypass -File ./scripts/merge-databases.ps1",
+    "seed:challenges": "node seed.js",
+    "seed:exams": "node seedExams.js",
+    "seed:reference": "node seedReference.js",
+    "seed:theory": "node seedTheory.js",
+    "seed:study-plans": "node seedStudyPlans.js",
+    "validate:study-plans": "node scripts/validate-study-plans.js",
+    "verify": "node scripts/verify-platform.js",
+    "seed:university": "node seedUniversity.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dockerode": "^5.0.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.5.2",
+    "express-validator": "^7.3.2",
+    "express-ws": "^5.0.2",
+    "groq-sdk": "^1.2.0",
+    "helmet": "^8.2.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.6.2",
+    "multer": "^2.1.1",
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^8.0.10",
+    "openai": "^6.39.0",
+    "pdfkit": "^0.19.0",
+    "sharp": "^0.35.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.14",
+    "supertest": "^7.2.2"
+  }
+}

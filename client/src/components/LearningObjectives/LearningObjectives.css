@@ -1,0 +1,67 @@
+.learning-objectives {
+  background: var(--card-bg);
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--border));
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.15rem;
+  margin-bottom: 1.25rem;
+}
+
+.learning-objectives--compact {
+  padding: 0.75rem 0.9rem;
+  margin-bottom: 0.85rem;
+  border-radius: var(--radius-md);
+}
+
+.learning-objectives-title {
+  margin: 0 0 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+
+.learning-objectives-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.learning-objectives-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.learning-objectives--compact .learning-objectives-item {
+  font-size: 0.8rem;
+  gap: 0.4rem;
+}
+
+.learning-objectives-check {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: 0.1rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--success) 18%, transparent);
+  color: var(--success);
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.learning-objectives-more {
+  margin: 0.55rem 0 0;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}

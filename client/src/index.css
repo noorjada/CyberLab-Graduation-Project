@@ -1,0 +1,12 @@
+@import './styles/theme.css';
+@import './styles/global.css';
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: var(--font-mono);
+}

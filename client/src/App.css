@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  min-height: 100vh;
+}
+
+.main-content--guest {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 3.5rem 0.75rem 1rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+input, textarea, select {
+  outline: none;
+  font-family: inherit;
+}

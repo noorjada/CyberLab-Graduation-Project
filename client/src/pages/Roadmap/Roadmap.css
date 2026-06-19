@@ -1,0 +1,444 @@
+.roadmap-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.roadmap-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.roadmap-header h1 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.roadmap-header p {
+  color: var(--text-secondary);
+}
+
+.roadmap-xp {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  min-width: 250px;
+  max-width: 300px;
+  flex-shrink: 0;
+}s
+
+.xp-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.xp-label {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.xp-value {
+  color: var(--warning);
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.xp-bar {
+  background: var(--border);
+  border-radius: 10px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.xp-fill {
+  background: linear-gradient(90deg, var(--warning), var(--danger));
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.track-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.track-tab {
+  background: transparent;
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.track-tab:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.track-tab.active {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border-color: var(--accent-blue);
+}
+
+.career-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.career-tab {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.career-tab:hover {
+  border-color: var(--border-light);
+  color: var(--text-primary);
+}
+
+.career-tab.active {
+  background: var(--bg-elevated);
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.paths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.path-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--accent-blue);
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.path-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-light);
+}
+
+.path-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.path-icon {
+  font-size: 2rem;
+}
+
+.path-badges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+
+.track-badge {
+  font-size: 0.78rem;
+  font-weight: bold;
+}
+
+.career-badge {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.path-card h3 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.path-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.path-progress {
+  margin-bottom: 1rem;
+}
+
+.path-progress-bar {
+  background: var(--border);
+  border-radius: 10px;
+  height: 6px;
+  overflow: hidden;
+  margin-bottom: 0.3rem;
+}
+
+.path-progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.path-progress-text {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.path-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.path-xp {
+  color: var(--warning);
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.path-modules {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.path-complete {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--success) 30%, transparent);
+}
+
+.completed-path-badge {
+  background: var(--diff-easy-bg);
+  color: var(--success);
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border: 1px solid color-mix(in srgb, var(--success) 35%, transparent);
+}
+
+.cert-download-btn {
+  display: block;
+  width: 100%;
+  margin-top: 0.9rem;
+  padding: 0.6rem;
+  background: var(--diff-easy-bg);
+  border: 1px solid var(--success);
+  color: var(--success);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.cert-download-btn:hover:not(:disabled) {
+  background: var(--success);
+  color: #010409;
+}
+
+.cert-download-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.path-modal {
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 680px;
+  position: relative;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.modal-close:hover { color: var(--text-primary); }
+
+.modal-header {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+
+.modal-icon { font-size: 2.5rem; }
+
+.modal-header h2 {
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.modal-header p { color: var(--text-secondary); font-size: 0.9rem; }
+
+.modal-progress {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-progress-bar {
+  flex: 1;
+  background: var(--border);
+  border-radius: 10px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.modal-progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.modal-progress span { color: var(--text-secondary); font-size: 0.85rem; white-space: nowrap; }
+
+.modules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.module-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.2rem;
+  transition: border-color 0.2s;
+  gap: 1rem;
+}
+
+.module-item:hover { border-color: var(--border-light); }
+
+.module-item.completed { border-color: color-mix(in srgb, var(--success) 35%, transparent); }
+
+.module-left {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.module-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: white;
+  flex-shrink: 0;
+}
+
+.module-info h4 {
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+.module-info p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 0.6rem;
+}
+
+.module-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.topic-tag {
+  background: var(--border);
+  color: var(--text-secondary);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+}
+
+.module-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.module-xp {
+  color: var(--warning);
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.complete-btn {
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.complete-btn:hover:not(:disabled) { opacity: 0.85; }
+.complete-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.completed-label {
+  color: var(--success);
+  font-size: 0.85rem;
+  font-weight: bold;
+}
